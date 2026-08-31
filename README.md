@@ -86,11 +86,11 @@ Charts saved to charts/
 ## Tech stack
 
 - Python 3
-- pandas — data loading and aggregation
-- numpy — linear trend regression
-- matplotlib / seaborn — static charts and heatmap
-- streamlit — interactive dashboard
-- plotly — interactive charts inside the dashboard
+- pandas - data loading and aggregation
+- numpy - linear trend regression
+- matplotlib / seaborn - static charts and heatmap
+- streamlit - interactive dashboard
+- plotly - interactive charts inside the dashboard
 
 ## Running it
 
