@@ -1,131 +1,364 @@
 # ⛳ Golf Performance Tracker
 
-**Turn your scorecards into a story.**
+<div align="center">
 
-This is a Python-powered analytics toolkit built around one thing: *my own golf rounds*. No public datasets, no scraped leaderboards — just `data/rounds.csv`, my personal round log, fed straight into charts, stats, and a live dashboard so I can watch my game evolve after every 18 holes. 🏌️‍♂️📈
+### **Turn your scorecards into a story.**
 
-Log a round → run a script → see exactly what's working (and what's wrecking your scorecard).
+A Python-powered golf analytics project that transforms personal round data into meaningful statistics, visualisations, trends, and an interactive dashboard.
+
+🏌️‍♂️ 📊 📈
+
+</div>
 
 ---
 
-## 🎯 Two Ways to Play
+## 📌 Overview
 
-| | **`golf_analysis.py`** | **`dashboard.py`** |
+Golf Performance Tracker is built around one thing: **tracking and understanding my own golf performance**.
+
+Instead of relying on public datasets or scraped leaderboards, the project uses a personal round log stored in `data/rounds.csv`. Each recorded round feeds directly into statistical analysis, visualisations, trend tracking, and a live interactive dashboard.
+
+The goal is simple:
+
+> **Log a round → Analyse the data → Understand what's improving and what's hurting the scorecard.**
+
+Whether it's a quick post-round analysis or a deeper dive into long-term performance, Golf Performance Tracker makes it easier to answer one important question:
+
+> **"Am I actually getting better, or does it just feel that way?"**
+
+---
+
+# 🎯 Two Ways to Analyse Your Game
+
+The project includes two different ways to explore the data.
+
+| | 📊 `golf_analysis.py` | 🌐 `dashboard.py` |
 |---|---|---|
-| **Vibe** | Fast, no-frills console report | Full interactive web app |
-| **Best for** | A quick post-round gut check | Deep dives, filtering, logging new rounds |
-| **Output** | Terminal summary + 5 PNG charts in `charts/` | Live Streamlit dashboard in your browser |
-| **Powered by** | pandas, numpy, matplotlib, seaborn | + streamlit, plotly |
+| **Experience** | Fast, focused analysis | Full interactive dashboard |
+| **Best for** | Quick post-round check | Deep dives and exploration |
+| **Output** | Terminal summary + 5 charts | Interactive Streamlit web app |
+| **Visualisation** | Matplotlib & Seaborn | Plotly |
+| **Data Management** | Reads existing round data | Filter, explore and log new rounds |
+
+### ⚡ Quick Analysis
+
+Run the analytics script to generate a summary of your performance and automatically create visualisations.
+
+### 🌐 Interactive Dashboard
+
+Launch the Streamlit dashboard to explore performance trends, filter rounds, interact with charts, download data, and log new rounds without manually editing the CSV file.
 
 ---
 
-## 🧠 What It Actually Calculates
+# 🧠 What It Analyses
 
-This isn't just "average score." It digs in:
+This project goes beyond simply calculating an average score.
 
-- 📊 **Derived stats** — score-to-par, fairway %, GIR %, putts per hole
-- 📉 **3-round rolling scoring average** — smooths out the one bad hole-in-the-water round
-- 📈 **Linear trend line** — fits your scoring trajectory and *projects your next round*
-- 🏅 **Simplified handicap index** — estimated from your best recent rounds
-- 🎯 **Consistency score** — standard deviation, because everyone has an off day
-- 🔍 **Correlation analysis** — which stats *actually* move your score, and by how much (spoiler: it's probably putts)
+It derives and analyses key golf performance metrics, including:
 
-## 🖼️ Five Charts, Every Run
+- 📊 **Score-to-par** — Understand how each round compares to the course par.
+- 🎯 **Fairway percentage** — Track driving accuracy over time.
+- 🟢 **Greens in Regulation (GIR)** — Measure approach consistency.
+- ⛳ **Putts per hole** — Identify putting performance.
+- 📉 **3-round rolling average** — Smooth out individual bad rounds and highlight longer-term performance.
+- 📈 **Linear trend analysis** — Identify scoring direction and estimate future performance.
+- 🏅 **Simplified handicap estimate** — Calculated using recent best rounds.
+- 🎲 **Consistency analysis** — Uses standard deviation to measure how stable scoring performance is.
+- 🔍 **Correlation analysis** — Identifies which performance metrics are most strongly associated with lower or higher scores.
 
-Dropped straight into `charts/`:
-
-1. **Score over time** — with rolling average + trend line, plotted against par
-2. **Fairways / GIR / Putts** — three key stats tracked round-by-round
-3. **Score-vs-par by course** — ranked from your best track to your personal graveyard
-4. **Correlation heatmap** — score vs. every underlying stat, at a glance
-5. **Putts vs. score scatter** — with a regression line showing the damage bad putting does
-
-## 💻 Dashboard Extras
-
-Everything above, plus:
-
-- 🗓️ Date & course filtering
-- ⚡ Live KPI cards
-- 🖱️ Interactive Plotly charts (hover, zoom, the works)
-- 📋 Sortable, downloadable round table (CSV export)
-- ✍️ **"Log a New Round" form** — appends straight to `data/rounds.csv`, no manual editing needed
-
-18 rounds in, and the trend line doesn't lie: fairways and greens are the game, putting is the tax. 🏌️➡️⛳
-
-## 📸 Dashboard Screenshots
-
-<img width="1917" height="962" alt="dashboard_overview" src="https://github.com/user-attachments/assets/220c3415-d28d-46b6-b589-5ab5d914479c" />
-<img width="1916" height="965" alt="dashboard_add_round" src="https://github.com/user-attachments/assets/fc3bb174-e1d4-46de-8363-99a2526bf2f9" />
-<img width="1917" height="917" alt="dashboard_correlation" src="https://github.com/user-attachments/assets/9c62eda0-aad0-4986-9291-c3282848a68e" />
-<img width="1917" height="957" alt="dashboard_round_log" src="https://github.com/user-attachments/assets/0a4eeeef-f86f-449a-b4b3-f4c8364a50c8" />
-<img width="1912" height="971" alt="dashboard_stats_courses" src="https://github.com/user-attachments/assets/bedb2448-dff0-4f79-9aaa-eb6b541c83a3" />
+The more rounds added to the dataset, the clearer the picture becomes.
 
 ---
 
-## 🛠️ Tech Stack
+# 📊 Visualisations
 
-| Tool | Job |
+Running the analysis script automatically generates **five charts** inside the `charts/` directory.
+
+### 1️⃣ Score Over Time
+
+Tracks scores across all recorded rounds and compares them against:
+
+- Course par
+- 3-round rolling average
+- Linear trend line
+
+This makes it easier to see whether performance is genuinely improving over time.
+
+### 2️⃣ Fairways, GIR & Putts
+
+Tracks three of the most important performance indicators round-by-round:
+
+- Fairway accuracy
+- Greens in Regulation
+- Total putts
+
+### 3️⃣ Score vs Par by Course
+
+Compares performance across different courses to identify:
+
+🏆 Your strongest course  
+😅 Your toughest course  
+📈 Where your scoring is improving
+
+### 4️⃣ Correlation Heatmap
+
+Displays relationships between your score and underlying performance metrics.
+
+This helps answer questions such as:
+
+> **Does better putting actually lead to lower scores?**  
+> **How strongly does GIR affect performance?**  
+> **Are fairways or putting more important for your game?**
+
+### 5️⃣ Putts vs Score
+
+A scatter plot with a regression line showing the relationship between putting performance and total score.
+
+Sometimes the numbers confirm what you already suspected:
+
+> **Fairways and greens are the game. Putting is the tax.** 🏌️➡️⛳
+
+---
+
+# 🌐 Interactive Dashboard
+
+The Streamlit dashboard provides everything from the analysis script, with additional interactive features.
+
+### Dashboard Features
+
+- 🗓️ **Filter rounds by date**
+- ⛳ **Filter performance by course**
+- ⚡ **Live KPI cards**
+- 📊 **Interactive Plotly charts**
+- 🔍 **Hover, zoom and explore data**
+- 📋 **Sortable round history**
+- 📥 **Download filtered data as CSV**
+- ✍️ **Log a New Round directly from the dashboard**
+
+No manual CSV editing is required when using the built-in round logging form.
+
+Each newly logged round automatically becomes part of the dataset and feeds into future analysis.
+
+---
+
+# 📸 Dashboard Screenshots
+
+### 🏌️ Dashboard Overview
+
+<img width="1917" height="962" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/220c3415-d28d-46b6-b589-5ab5d914479c" />
+
+---
+
+### ➕ Log a New Round
+
+<img width="1916" height="965" alt="Add New Round" src="https://github.com/user-attachments/assets/fc3bb174-e1d4-46de-8363-99a2526bf2f9" />
+
+---
+
+### 🔍 Correlation Analysis
+
+<img width="1917" height="917" alt="Correlation Analysis" src="https://github.com/user-attachments/assets/9c62eda0-aad0-4986-9291-c3282848a68e" />
+
+---
+
+### 📋 Round Log
+
+<img width="1917" height="957" alt="Round Log" src="https://github.com/user-attachments/assets/0a4eeeef-f86f-449a-b4b3-f4c8364a50c8" />
+
+---
+
+### ⛳ Course Statistics
+
+<img width="1912" height="971" alt="Course Statistics" src="https://github.com/user-attachments/assets/bedb2448-dff0-4f79-9aaa-eb6b541c83a3" />
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
 |---|---|
-| 🐍 Python 3 | The engine |
-| 🐼 pandas | Data loading & aggregation |
-| 🔢 numpy | Linear trend regression |
-| 📊 matplotlib / seaborn | Static charts + heatmap |
-| 🌐 streamlit | Interactive dashboard |
-| ✨ plotly | Interactive in-dashboard charts |
+| 🐍 **Python 3** | Core programming language |
+| 🐼 **pandas** | Data loading, cleaning and aggregation |
+| 🔢 **NumPy** | Numerical calculations and trend regression |
+| 📊 **Matplotlib** | Static data visualisation |
+| 🎨 **Seaborn** | Statistical visualisation and correlation heatmaps |
+| 🌐 **Streamlit** | Interactive web dashboard |
+| ✨ **Plotly** | Interactive charts and visualisations |
 
 ---
 
-## 🚀 Running It
+# 🚀 Getting Started
 
-**Console script** (static charts + summary):
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
+```
+
+## 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+---
+
+# 📊 Run the Analysis Script
+
+For a quick statistical summary and automatically generated charts:
+
+```bash
 python golf_analysis.py
 ```
 
-**Interactive dashboard:**
+This will:
+
+- Load your round data
+- Calculate derived statistics
+- Display a performance summary in the terminal
+- Generate five charts
+- Save the charts inside the `charts/` directory
+
+---
+
+# 🌐 Run the Interactive Dashboard
+
+Launch the Streamlit application with:
 
 ```bash
-pip install -r requirements.txt
 streamlit run dashboard.py
 ```
 
-Opens a browser tab where you can filter by course/date, poke around interactive charts, browse the round log as a sortable table, download filtered data as CSV, and log new rounds through a form — zero manual CSV editing required.
+The dashboard will open in your browser, where you can:
+
+- Explore interactive charts
+- Filter data by course or date
+- View performance statistics
+- Browse your round history
+- Download filtered data
+- Log new rounds
 
 ---
 
-## ✍️ Logging Your Own Rounds
+# ✍️ Logging Your Own Rounds
 
-Add a row to `data/rounds.csv` (or use the dashboard's **"Log a New Round"** form) in this format:
+Round data is stored in:
+
+```text
+data/rounds.csv
+```
+
+You can either manually add a row to the CSV file or use the dashboard's **Log a New Round** form.
+
+The dataset uses the following structure:
 
 | Column | Description |
 |---|---|
-| `date` | Round date, `YYYY-MM-DD` |
-| `course` | Course name |
-| `par` | Course par (typically 71 or 72) |
+| `date` | Round date in `YYYY-MM-DD` format |
+| `course` | Name of the golf course |
+| `par` | Course par, typically 71 or 72 |
 | `score` | Total strokes for the round |
-| `fairways_hit` | Number of fairways hit |
-| `fairways_total` | Fairway opportunities (usually 14) |
-| `greens_in_regulation` | Number of greens hit in regulation |
+| `fairways_hit` | Number of fairways successfully hit |
+| `fairways_total` | Total fairway opportunities |
+| `greens_in_regulation` | Number of greens reached in regulation |
 | `putts` | Total putts for the round |
-| `penalties` | Penalty strokes taken |
+| `penalties` | Total penalty strokes |
 
-Every new round automatically feeds the rolling average, the trend projection, and the correlation analysis — so the more you log, the smarter the picture gets. 🔁
+### Example
+
+```csv
+date,course,par,score,fairways_hit,fairways_total,greens_in_regulation,putts,penalties
+2026-08-30,Example Golf Club,72,89,9,14,7,34,2
+```
+
+Every new round automatically contributes to:
+
+- 📉 Rolling scoring averages
+- 📈 Performance trend analysis
+- 🏅 Handicap estimation
+- 🎯 Consistency tracking
+- 🔍 Correlation analysis
+
+**The more rounds you log, the more meaningful the analysis becomes.**
 
 ---
 
-## 🔭 Possible Next Steps
+# 📂 Project Structure
 
-- 🏌️ Track performance club-by-club (driver accuracy, approach distances, etc.)
-- ☁️ Correlate scores with weather conditions on the day
-- 🧮 Swap the simplified handicap formula for the full USGA calculation
-- ☁️ Deploy the dashboard (e.g. Streamlit Community Cloud) for access from any device
+```text
+Golf-Performance-Tracker/
+│
+├── data/
+│   └── rounds.csv
+│
+├── charts/
+│   └── Generated visualisations
+│
+├── golf_analysis.py
+├── dashboard.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-*Built to answer one question after every round: "Am I actually getting better, or does it just feel that way?"* 🏆
+# 🔭 Future Improvements
+
+There are several opportunities to expand the project further:
+
+- 🏌️ **Club-by-club performance tracking**
+  - Driver accuracy
+  - Approach distances
+  - Club selection analysis
+
+- ☁️ **Weather integration**
+  - Temperature
+  - Wind
+  - Rain
+  - Weather impact on scoring
+
+- 🧮 **Advanced handicap calculation**
+  - Replace the simplified formula with a more comprehensive handicap calculation.
+
+- 🌍 **Cloud deployment**
+  - Deploy the Streamlit dashboard for access from any device.
+
+- 📱 **Mobile-friendly experience**
+  - Optimise the dashboard for quick post-round logging.
 
 ---
 
-## 📋 Sample Output
+# 🎯 The Goal
+
+Golf Performance Tracker was built to turn personal golf data into something useful.
+
+Not just:
+
+> *"What did I score?"*
+
+But:
+
+> **Why did I score that way?**
+
+> **What part of my game is improving?**
+
+> **Where am I losing strokes?**
+
+> **And most importantly... am I actually getting better?** 🏆
+
+---
+
+<div align="center">
+
+## ⛳ **Log. Analyse. Improve. Repeat.**
+
+*Because every round tells a story — the data just helps you read it.*
+
+🏌️‍♂️ 📊 📈
+
+<br>
+
+### **Developed by Jarrud Cochrane**
+
+</div>
