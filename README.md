@@ -2,17 +2,17 @@
 
 A Python project that analyses my own golf rounds and turns them into
 performance charts, deeper statistical breakdowns, and an interactive
-dashboard. This isn't built on a public or scraped dataset — it's my
+dashboard. This isn't built on a public or scraped dataset it's my
 personal round log (`data/rounds.csv`), and the project is designed so I
 can keep appending new rounds after every game and immediately see how I'm
 trending over a season.
 
 It ships two ways to explore the data:
 
-1. **`golf_analysis.py`** — a console script that prints a detailed stat
+1. **`golf_analysis.py`** - a console script that prints a detailed stat
    summary and saves five charts as PNGs (great for a quick check or for
    embedding static images, like below).
-2. **`dashboard.py`** — a Streamlit web app with filters, interactive
+2. **`dashboard.py`** - a Streamlit web app with filters, interactive
    charts, and a form to log new rounds without touching the CSV directly.
 
 ## What it does
