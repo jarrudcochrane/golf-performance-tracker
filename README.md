@@ -68,11 +68,15 @@ Charts saved to charts/
 
 <img width="1917" height="962" alt="dashboard_overview png" src="https://github.com/user-attachments/assets/220c3415-d28d-46b6-b589-5ab5d914479c" />
 
+
 <img width="1916" height="965" alt="dashboard_add_round png" src="https://github.com/user-attachments/assets/fc3bb174-e1d4-46de-8363-99a2526bf2f9" />
+
 
 <img width="1917" height="917" alt="dashboard_correlation png" src="https://github.com/user-attachments/assets/9c62eda0-aad0-4986-9291-c3282848a68e" />
 
+
 <img width="1917" height="957" alt="dashboard_round_log png" src="https://github.com/user-attachments/assets/0a4eeeef-f86f-449a-b4b3-f4c8364a50c8" />
+
 
 <img width="1912" height="971" alt="dashboard_stats_courses png" src="https://github.com/user-attachments/assets/bedb2448-dff0-4f79-9aaa-eb6b541c83a3" />
 
