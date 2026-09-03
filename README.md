@@ -10,7 +10,6 @@ A Python-powered golf analytics project that transforms personal round data into
 
 </div>
 
----
 
 ## 📌 Overview
 
@@ -26,7 +25,6 @@ Whether it's a quick post-round analysis or a deeper dive into long-term perform
 
 > **"Am I actually getting better, or does it just feel that way?"**
 
----
 
 # 🎯 Two Ways to Analyse Your Game
 
@@ -48,7 +46,7 @@ Run the analytics script to generate a summary of your performance and automatic
 
 Launch the Streamlit dashboard to explore performance trends, filter rounds, interact with charts, download data, and log new rounds without manually editing the CSV file.
 
----
+
 
 # 🧠 What It Analyses
 
@@ -56,19 +54,18 @@ This project goes beyond simply calculating an average score.
 
 It derives and analyses key golf performance metrics, including:
 
-- 📊 **Score-to-par** — Understand how each round compares to the course par.
-- 🎯 **Fairway percentage** — Track driving accuracy over time.
-- 🟢 **Greens in Regulation (GIR)** — Measure approach consistency.
-- ⛳ **Putts per hole** — Identify putting performance.
-- 📉 **3-round rolling average** — Smooth out individual bad rounds and highlight longer-term performance.
-- 📈 **Linear trend analysis** — Identify scoring direction and estimate future performance.
-- 🏅 **Simplified handicap estimate** — Calculated using recent best rounds.
-- 🎲 **Consistency analysis** — Uses standard deviation to measure how stable scoring performance is.
-- 🔍 **Correlation analysis** — Identifies which performance metrics are most strongly associated with lower or higher scores.
+- 📊 **Score-to-par** - Understand how each round compares to the course par.
+- 🎯 **Fairway percentage** - Track driving accuracy over time.
+- 🟢 **Greens in Regulation (GIR)** - Measure approach consistency.
+- ⛳ **Putts per hole** - Identify putting performance.
+- 📉 **3-round rolling average** - Smooth out individual bad rounds and highlight longer-term performance.
+- 📈 **Linear trend analysis** - Identify scoring direction and estimate future performance.
+- 🏅 **Simplified handicap estimate** - Calculated using recent best rounds.
+- 🎲 **Consistency analysis** - Uses standard deviation to measure how stable scoring performance is.
+- 🔍 **Correlation analysis** - Identifies which performance metrics are most strongly associated with lower or higher scores.
 
 The more rounds added to the dataset, the clearer the picture becomes.
 
----
 
 # 📊 Visualisations
 
@@ -118,7 +115,6 @@ Sometimes the numbers confirm what you already suspected:
 
 > **Fairways and greens are the game. Putting is the tax.** 🏌️➡️⛳
 
----
 
 # 🌐 Interactive Dashboard
 
@@ -139,7 +135,6 @@ No manual CSV editing is required when using the built-in round logging form.
 
 Each newly logged round automatically becomes part of the dataset and feeds into future analysis.
 
----
 
 # 📸 Dashboard Screenshots
 
@@ -147,31 +142,26 @@ Each newly logged round automatically becomes part of the dataset and feeds into
 
 <img width="1917" height="962" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/220c3415-d28d-46b6-b589-5ab5d914479c" />
 
----
 
 ### ➕ Log a New Round
 
 <img width="1916" height="965" alt="Add New Round" src="https://github.com/user-attachments/assets/fc3bb174-e1d4-46de-8363-99a2526bf2f9" />
 
----
 
 ### 🔍 Correlation Analysis
 
 <img width="1917" height="917" alt="Correlation Analysis" src="https://github.com/user-attachments/assets/9c62eda0-aad0-4986-9291-c3282848a68e" />
 
----
 
 ### 📋 Round Log
 
 <img width="1917" height="957" alt="Round Log" src="https://github.com/user-attachments/assets/0a4eeeef-f86f-449a-b4b3-f4c8364a50c8" />
 
----
 
 ### ⛳ Course Statistics
 
 <img width="1912" height="971" alt="Course Statistics" src="https://github.com/user-attachments/assets/bedb2448-dff0-4f79-9aaa-eb6b541c83a3" />
 
----
 
 # 🛠️ Tech Stack
 
@@ -185,7 +175,6 @@ Each newly logged round automatically becomes part of the dataset and feeds into
 | 🌐 **Streamlit** | Interactive web dashboard |
 | ✨ **Plotly** | Interactive charts and visualisations |
 
----
 
 # 🚀 Getting Started
 
@@ -202,7 +191,6 @@ cd YOUR-REPOSITORY
 pip install -r requirements.txt
 ```
 
----
 
 # 📊 Run the Analysis Script
 
@@ -220,7 +208,6 @@ This will:
 - Generate five charts
 - Save the charts inside the `charts/` directory
 
----
 
 # 🌐 Run the Interactive Dashboard
 
@@ -239,7 +226,6 @@ The dashboard will open in your browser, where you can:
 - Download filtered data
 - Log new rounds
 
----
 
 # ✍️ Logging Your Own Rounds
 
@@ -282,7 +268,6 @@ Every new round automatically contributes to:
 
 **The more rounds you log, the more meaningful the analysis becomes.**
 
----
 
 # 📂 Project Structure
 
@@ -301,7 +286,6 @@ Golf-Performance-Tracker/
 └── README.md
 ```
 
----
 
 # 🔭 Future Improvements
 
@@ -327,7 +311,6 @@ There are several opportunities to expand the project further:
 - 📱 **Mobile-friendly experience**
   - Optimise the dashboard for quick post-round logging.
 
----
 
 # 🎯 The Goal
 
@@ -347,7 +330,6 @@ But:
 
 > **And most importantly... am I actually getting better?** 🏆
 
----
 
 <div align="center">
 
