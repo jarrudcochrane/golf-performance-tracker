@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Golf Performance Tracker banner with a falling score trend line">
   <rect width="1200" height="300" fill="#0F3D2E"/>
-  <g stroke="#1D5A45" stroke-width="1"><line x1="640" y1="70" x2="1140" y2="70"/><line x1="640" y1="130" x2="1140" y2="130"/><line x1="640" y1="190" x2="1140" y2="190"/><line x1="640" y1="250" x2="1140" y2="250"/></g>
+  <g transform="translate(228,40) scale(0.8)"><g stroke="#1D5A45" stroke-width="1"><line x1="640" y1="70" x2="1140" y2="70"/><line x1="640" y1="130" x2="1140" y2="130"/><line x1="640" y1="190" x2="1140" y2="190"/><line x1="640" y1="250" x2="1140" y2="250"/></g>
   <polyline points="650,90 710,120 770,100 830,150 890,135 950,175 1010,160 1070,200 1130,185" fill="none" stroke="#F0B03A" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
   <line x1="650" y1="95" x2="1130" y2="195" stroke="#9FD3B8" stroke-width="3" stroke-dasharray="10 8"/>
   <g fill="#F2F5F7"><circle cx="710" cy="120" r="6"/><circle cx="830" cy="150" r="6"/><circle cx="950" cy="175" r="6"/><circle cx="1070" cy="200" r="6"/></g>
-  <text x="60" y="130" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="54" fill="#F2F5F7">Golf Performance Tracker</text>
+  </g>
+  <text x="60" y="130" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="46" fill="#F2F5F7">Golf Performance Tracker</text>
   <text x="60" y="180" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#BFE3D0">Turn scorecards into a story</text>
   <rect x="60" y="205" width="150" height="6" rx="3" fill="#F0B03A"/>
 </svg>
